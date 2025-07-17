@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>personal portfolio websites</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .container {
-            width: 86%;
-            margin: auto;
-        }
-
         body {
             height: 200vh;
         }
@@ -22,127 +17,201 @@
 </head>
 
 <body>
-    <div class="flex-col fixed right-[20px] bottom-[20px] z-5">
-        <button id="dropdownTopButton" data-dropdown-toggle="social" data-dropdown-placement="top"
-            class="flex items-center bg-white shadow hover:shadow-lg hover:text-[blue] px-4 py-2-lg px-4 py-2"
-            type="button">socials <svg class="w-2.5 h-2.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 5 5 1 1 5" />
-            </svg>
-        </button>
-        <div id="social" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg flex-col items-center  w-44 ">
 
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="person-playing-3d-video-games-device (1).jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Bishan </span><br>Rai From Nepal</h1>
+
+            </div>
         </div>
-        <a href="https://wa:me/9700745371">
-            <img class="h-[60px] rounded-full"
-                src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="">
-        </a>
-        <a href="tel:9700745371">
-            <img class="h-[50px] rounded-full"
-                src="https://media.istockphoto.com/id/1494579261/vector/telephone-handset-simple-circle-icon.jpg?s=612x612&w=0&k=20&c=bpf-J3OuFFZDNS3gQQ25Xgp6PKJ_lhbmvuO-kYgNCSg="
-                alt="">
-        </a>
-        <a href="mailto:bishanmewahang2062@gmail.com">
-            <img class="h-[50px] rounded-full" src="https://cdn-icons-png.flaticon.com/512/6711/6711567.png" alt="">
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer .php?u=https://example.com">
-            <img class="h-[50px] rounded-full"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/800px-Facebook_f_logo_%282021%29.svg.png"
-                alt="">
-        </a>
     </div>
-    <header class="fixed top-0 z-10 w-full">
-        <nav class=" flex justify-between items-center text-white container">
-            <div>
-                <img class="h-[70px]" src="hacker.jpg" alt="hacker logo">
+    <!-------about------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="tiktok resort.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugit minima omnis neque ex
+                        debitis
+                        beatae consectetur odio eum, aspernatur accusamus iste adipisci obcaecati pariatur doloremque
+                        vero
+                        magni ipsum at?</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App interface</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span>2021 - current </span><br>UI?UX Design training at parity institute</li>
+                            <li><span>2019-2021> team lead at Adarsha StarApp</li>
+                            <li><span>2016-2018</span><br>internship at Daraz ecommerce</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>Web design training from Codeit</li>
+                            <li><span>2017</span><br>+2 from shree public high school</li>
+                            <li><span>2020</span><br>csit from hattisaar</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <ul class="flex gap-[40px]">
-                <a href="">Home</a>
-            </ul>
-            <ul> 
-                <a href="" >About</a>
-            </ul>
-            <ul>
-                <a href="" >Service</a>
-            </ul>
-            <ul>
-                <a href="">portfolio</a>
-            </ul>
-            <ul>
-                <a href="" >Blog</a>
-            </ul>
+            <!----services-------->
+            <div id="services">
+                <div class="container">
+                    <h1 class="sub-title"> My Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Web Design</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores itaque deleniti quo
+                                maiores voluptate ex quam voluptatum dignissimos atque dolorem. Harum unde minima ad
+                                nihil
+                                aspernatur saepe nesciunt optio quisquam!</p>
+                            <a href="#">Learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-crop"></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores itaque deleniti quo
+                                maiores voluptate ex quam voluptatum dignissimos atque dolorem. Harum unde minima ad
+                                nihil
+                                aspernatur saepe nesciunt optio quisquam!</p>
+                            <a href="#">Learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-app-store"></i>
+                            <h2>App Design</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores itaque deleniti quo
+                                maiores voluptate ex quam voluptatum dignissimos atque dolorem. Harum unde minima ad
+                                nihil
+                                aspernatur saepe nesciunt optio quisquam!</p>
+                            <a href="#">Learn more</a>
+                        </div>
 
-            <div>
-                <a href="" class=" relative bg-[red] text-white px-[24px] py-[10px] rounded-[26px]">
-                    Get In Touch
-                    <span
-                        class="bg-[black] text-[white] font-bold px-1 text-[8px] absolute -top-[8px] right-0 rounded-full">10</span>
-                </a>
+                    </div>
+                </div>
 
             </div>
-        </nav>
-    </header>
-    <main>
-        <section class="bg-black text-black"
-            style="background-image: url('person-playing-3d-video-games-device\ \(1\).jpg'); background-repeat: no-repeat; background-size: cover;">
-            <div class="container flex flex-col justify-center items-center h-[86vh]">
-                <h1 class=" flex  text-center text-[42px]">
-                    Hello I'm <br> Full stack Developer <br> Bishan Rai
-                </h1><br>
-                <p>
-                    "I am a passionate Web Developer skilled in HTML, CSS, JavaScript, and modern. <br> I create
-                    responsive, user-friendly websites and web apps, focusing on performance and clean design."
-                </p>
-                <div><br>
-                    
-                    <a href=""
-                        class="w-[2px] bg-[gray] flex-col text-[red]  px-[20px] py-[10px] rounded-[45px]">Hire
-                        me</a>
-                        <a href=""
-                        class="w-[2px] bg-[gray] flex-col text-[red]  px-[20px] py-[10px] rounded-[45px]">contact
-                        </a>
+            <!--------------------portfolio-------------->
+            <div id="portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="create-you.jpg">
+                            <div class="layer">
+                                <h3>social media </h3>
+                                <p>the app connect you the talented people around the world. Download it from play
+                                    store.</p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="cyber-security.jpg">
+                            <div class="layer">
+                                <h3>cyber-security</h3>
+                                <p>Keep Learning - Technology changes fast. Stay updated.</p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+
+
+                        </div>
+                        <div class="work">
+                            <img src="portrait-hacker.jpg">
+                            <div class="layer">
+                                <h3>hacking</h3>
+                                <p>Keep Learning - Technology changes fast. Stay updated.</p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">see more</a>
+                    </div>
+
                 </div>
+
             </div>
-        </section>
-        <section>
-            <div class="container py-10 grid-cols-3 gap-5">
-                <div class="shadow hover:shadow-lg hover:text-[red] px-4 py-2">
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta repellendus reprehenderit
-                        accusamus sint quaerat. Obcaecati error, amet reiciendis impedit nesciunt dignissimos omnis
-                        fugiat nisi quibusdam corrupti aperiam nemo. Deleniti, ipsum!
-                    </p>
+            <!---------------contact--------->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><i class="fa-solid fa-paper-plane"></i>bishanmewahang2062@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i>9700745371</i></p>
+                            <div class="social-icons">
+                                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-linkdin"></i></a>
+
+                            </div>
+                            <a href="c:\Users\bishan\Downloads\cv.jpeg" download class="btn btn 2">Download CV</a>
+                        </div>
+                        <div class="contact-right">
+                            <form>
+                                <input type="text" name="name" placeholder=" Enter Your name" required>
+                                <input type="email" name="email" placeholder="Your Email id" required>
+                                <textarea name="message" rows="6" placeholder=" Your message" id=""></textarea>
+                                <button type="submit" class="btn btn2">submit</button>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="shadow hover:shadow-lg hover:text-[red] px-4 py-2">
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta repellendus reprehenderit
-                        accusamus sint quaerat. Obcaecati error, amet reiciendis impedit nesciunt dignissimos omnis
-                        fugiat nisi quibusdam corrupti aperiam nemo. Deleniti, ipsum!
-                    </p>
+                <div class="copyright">
+                 <p>copyright @ bishan.Made with <i class="fa-solid fa-heart"></i>by Easy Tutorials</p>
                 </div>
-                <div class="shadow hover:shadow-lg hover:text-[red] px-4 py-2">
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta repellendus reprehenderit
-                        accusamus sint quaerat. Obcaecati error, amet reiciendis impedit nesciunt dignissimos omnis
-                        fugiat nisi quibusdam corrupti aperiam nemo. Deleniti, ipsum!
-                    </p>
-                </div>
-                <div class="shadow hover:shadow-lg hover:text-[red] px-4 py-2">
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta repellendus reprehenderit
-                        accusamus sint quaerat. Obcaecati error, amet reiciendis impedit nesciunt dignissimos omnis
-                        fugiat nisi quibusdam corrupti aperiam nemo. Deleniti, ipsum!
-                    </p>
-                </div>
+
             </div>
-        </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove("active-link");
+                    }
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+                function openmenu(){
+                    sidemenu.style.right ="0";
+                }
+                function closemenu(){
+                    sidemenu.style.right ="-200px";
+                }
+            </script>
 </body>
 
 </html>
